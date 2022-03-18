@@ -14,6 +14,7 @@ import Cart from "./Pages/Cart/Cart";
 import PrivateRoute from "./Pages/Login/Login/PrivateRoute/PrivateRoute";
 import Foods from "./Pages/Foods/Foods";
 import Details from "./Pages/Details/Details";
+import CustomizeDish from "./Pages/CustomizeDish/CustomizeDish";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
       <AuthProvider>
         <Router>
           <Switch>
+            <Route path="/foods/:id/customize">
+              <CustomizeDish />
+            </Route>
             <PrivateRoute path="/cart">
               <Cart />
             </PrivateRoute>

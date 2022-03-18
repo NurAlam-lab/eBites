@@ -10,12 +10,13 @@ import useAuth from '../../../hooks/useAuth';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { Badge } from 'react-bootstrap';
 
 export default function ButtonAppBar() {
-    const { allContext } = useAuth();
+    const { allContext, selectedFood } = useAuth();
     const { user, logOut } = allContext;
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box className="sticky-top" sx={{ flexGrow: 1 }}>
             <AppBar style={{ backgroundColor: '#000000', height: '80px' }} position="static">
                 <Toolbar>
                     <IconButton
@@ -32,6 +33,7 @@ export default function ButtonAppBar() {
                     </Typography>
                     <NavLink to="/cart" style={{ color: 'white', marginRight: "10px", fontSize: "20px" }}>
                         <FontAwesomeIcon icon={faShoppingCart} />
+                        <Badge className='bg-danger'>{selectedFood.length}</Badge>
                     </NavLink>
                     {
                         user?.email ?

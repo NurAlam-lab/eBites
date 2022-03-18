@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { Button, Card } from '@mui/material';
+import { Card } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const Food = (props) => {

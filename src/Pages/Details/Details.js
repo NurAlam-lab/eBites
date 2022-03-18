@@ -5,8 +5,7 @@ import { Container, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import { Link } from 'react-router-dom';
-import { NavLink } from 'react-bootstrap';
-import { StoreMallDirectoryRounded } from '@mui/icons-material';
+
 
 const Details = () => {
     const { id } = useParams();
@@ -39,7 +38,7 @@ const Details = () => {
                                 {description}
                             </Typography><br />
 
-                            <Link sx={{ mt: 6 }} style={{ backgroundColor: '#FF5733', textDecoration: 'none', color: 'white' }} className="btn fs-5 py-2 px-4 text-white">Order Now</Link><br />
+                            <Link to={`/foods/${id}/customize`} sx={{ mt: 6 }} style={{ backgroundColor: '#FF5733', textDecoration: 'none', color: 'white' }} className="btn fs-5 py-2 px-4 text-white">Order Now</Link><br />
                         </Box>
                     </Grid>
                 </Grid>

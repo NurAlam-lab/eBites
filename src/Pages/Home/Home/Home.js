@@ -6,6 +6,7 @@ import Foodies from '../Foodies/Foodies';
 import JoinWithUs from '../JoinWithUs/JoinWithUs';
 import Services from '../Services/Services';
 import TopBanner from '../TopBanner/TopBanner';
+import ToSellFood from '../ToSellFood/ToSellFood';
 import WhyeBites from '../WhyeBites/WhyeBites';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <Navigation></Navigation>
             <TopBanner></TopBanner>
             <Services></Services>
+            <ToSellFood></ToSellFood>
             <CookSpotlight></CookSpotlight>
             <WhyeBites></WhyeBites>
             <JoinWithUs></JoinWithUs>
