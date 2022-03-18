@@ -1,7 +1,5 @@
 import React from 'react';
-
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Cook from '../../../assets/Tabassum-Hussain-Tina.webp'
 import TinaFood from '../../../assets/tina-food.webp'
