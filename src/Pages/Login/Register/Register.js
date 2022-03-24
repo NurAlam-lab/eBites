@@ -33,7 +33,7 @@ const Register = () => {
         <Container>
             <Grid container spacing={2}>
                 <Grid sx={{ mt: 15 }} item xs={12} md={6}>
-                    <Typography variant='body1' gutterBottom>Sign Up</Typography>
+                    <Typography variant='h3' gutterBottom>Sign Up</Typography>
                     {!isLoading && <form onSubmit={handleLogInSubmit}>
                         <TextField
                             sx={{ width: '75%', m: 1 }}
@@ -70,14 +70,14 @@ const Register = () => {
                             onBlur={handleOnBlur}
                             variant="standard" />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant='contained'>Sign Up</Button> <br />
-                        <Link id='signIn-link' to='/login' >Already a member? Please Sign In</Link>
+                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant='contained' style={{ fontSize: '17px' }}>Sign Up</Button> <br />
+                        <Link id='signIn-link' to='/login' style={{ fontSize: '17px' }}>Already a member? Please Sign In</Link>
                     </form>}
                     {isLoading && <CircularProgress />}
-                    {user?.email && <Alert severity="success">user created successfully!</Alert>}
+                    {user?.email && <Alert severity="success" style={{ fontSize: '17px' }}>user created successfully!</Alert>}
                     {authError && <Alert severity="error">{authError}</Alert>}
                 </Grid>
-                <Grid sx={{ mt: 2 }} item xs={12} md={6}>
+                <Grid sx={{ mt: 2, mb: 4 }} item xs={12} md={6}>
                     <img style={{ width: '700px' }} src={login} alt="" />
                 </Grid>
             </Grid>

@@ -21,13 +21,13 @@ const JoinWithUs = () => {
         <Container style={cheafImg} sx={{ mt: 10 }}>
             <Box item style={{ ...joinUs }}>
                 <div>
-                    <Typography style={{ color: '#FFFFFF' }} variant='h3'>
+                    <Typography style={{ color: '#FFFFFF' }} variant='h1'>
                         Join With Us
                     </Typography>
-                    <Typography style={{ color: '#FFFFFF' }} variant='h6'>
+                    <Typography style={{ color: '#FFFFFF' }} variant='h3'>
                         Share your love of Homecooked meals
                     </Typography> <br />
-                    <Button variant='contained' sx={{ my: 1 }} style={{ backgroundColor: '#FF5733' }}>Apply Now</Button><br />
+                    <Button variant='contained' sx={{ my: 1 }} style={{ backgroundColor: '#FF5733', fontSize: '17px' }}>Apply Now</Button><br />
                 </div>
             </Box>
         </Container>

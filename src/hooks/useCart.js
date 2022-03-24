@@ -12,7 +12,14 @@ const useCart = () => {
             setSelectedFood(newSelection);
         }
     }
-    return { addToCart, selectedFood }
+
+
+
+    function remove(id) {
+        const foodAfterRemove = selectedFood.filter((food) => food.id != id);
+        setSelectedFood(foodAfterRemove);
+    }
+    return { addToCart, selectedFood, remove }
 };
 
 export default useCart;

@@ -3,8 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
 import Login from "./Pages/Login/Login/Login";
@@ -14,17 +13,17 @@ import Cart from "./Pages/Cart/Cart";
 import PrivateRoute from "./Pages/Login/Login/PrivateRoute/PrivateRoute";
 import Foods from "./Pages/Foods/Foods";
 import Details from "./Pages/Details/Details";
-import CustomizeDish from "./Pages/CustomizeDish/CustomizeDish";
+import Navigation from './Pages/Shared/Navigation/Navigation';
+import Footer from "./Pages/Shared/Footer/Footer";
+
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
+          <Navigation></Navigation>
           <Switch>
-            <Route path="/foods/:id/customize">
-              <CustomizeDish />
-            </Route>
             <PrivateRoute path="/cart">
               <Cart />
             </PrivateRoute>
@@ -47,6 +46,7 @@ function App() {
               <Home />
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

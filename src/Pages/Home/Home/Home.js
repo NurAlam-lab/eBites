@@ -12,7 +12,6 @@ import WhyeBites from '../WhyeBites/WhyeBites';
 const Home = () => {
     return (
         <div>
-            <Navigation></Navigation>
             <TopBanner></TopBanner>
             <Services></Services>
             <ToSellFood></ToSellFood>
@@ -20,7 +19,7 @@ const Home = () => {
             <WhyeBites></WhyeBites>
             <JoinWithUs></JoinWithUs>
             <Foodies></Foodies>
-            <Footer></Footer>
+
         </div>
     );
 };

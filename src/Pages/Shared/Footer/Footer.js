@@ -36,15 +36,15 @@ const Footer = () => {
     display: "inline-block",
   };
   return (
-    <div className="footer">
+    <div className="footer ">
       <Container>
         <Row>
           <Col>
             <div className="">
-              <h4 style={{ textAlign: 'left' }}>@eBites</h4>
+              <h2 style={{ textAlign: 'left' }}>@eBites</h2>
             </div>
             <ul className="list-unstyled mt-3 w-100">
-              <li style={{ textAlign: 'left' }} className="fs-6 fw-bold mb-2 text-white">
+              <li style={{ textAlign: 'left' }} className="fs-3 fw-bold mb-2 text-white">
                 <FontAwesomeIcon
                   className="me-2 social-icon"
                   icon={faMapMarkerAlt}
@@ -52,7 +52,7 @@ const Footer = () => {
                 />{" "}
                 Kunming,Yunnan,China.
               </li>
-              <li style={{ textAlign: 'left' }} className="fs-6 fw-bold mb-2 text-white">
+              <li style={{ textAlign: 'left' }} className="fs-3 fw-bold mb-2 text-white">
                 <FontAwesomeIcon
                   className="me-2 social-icon"
                   icon={faEnvelope}
@@ -60,7 +60,7 @@ const Footer = () => {
                 />{" "}
                 Official: xiaoen20183290523@gmail.com
               </li>
-              <li style={{ textAlign: 'left' }} className="fs-6 fw-bold mb-2 text-white">
+              <li style={{ textAlign: 'left' }} className="fs-3 fw-bold mb-2 text-white">
                 <FontAwesomeIcon className="me-2 social-icon" icon={faPhone} />{" "}
                 Helpline: 13224025057(Available:10:00AM to 10.00PM)
               </li>
@@ -102,7 +102,7 @@ const Footer = () => {
           </Col>
         </Row>
         <div>
-          <h4 className="text-white text-center">Follow Us</h4>
+          <h2 className="text-white text-center">Follow Us</h2>
           <ul className="list-unstyled d-flex justify-content-center">
             <li className="social-link">
               <a
@@ -134,7 +134,7 @@ const Footer = () => {
       </Container>
       <hr className="mt-2 mb-0 bg-white" />
       <div className="botton text-center">
-        <small>© 2022 eBites Theme by Goalthemes. All Rights Reserved.</small>
+        <h4>© 2022 eBites Theme by Goalthemes. All Rights Reserved.</h4>
       </div>
     </div >
   );

@@ -8,8 +8,8 @@ const AuthProvider = ({ children }) => {
     //hooks
     const allContext = useFirebase();
     const { foods } = useFoods();
-    const { addToCart, selectedFood } = useCart();
-    const data = { foods, allContext, addToCart, selectedFood };
+    const { addToCart, selectedFood, remove } = useCart();
+    const data = { foods, allContext, addToCart, selectedFood, remove };
     return (
         <AuthContext.Provider value={data}>
             {children}

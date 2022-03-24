@@ -47,7 +47,7 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoading(false));
     }
-
+    //email password Sign in
     const loginUser = (email, password, location, history) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
@@ -64,9 +64,12 @@ const useFirebase = () => {
 
     //google Sign in
     const signInWithGoogle = (location, history) => {
+        setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 const user = result.user;
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
                 setAuthError('');
             }).catch((error) => {
                 setAuthError(error.message);

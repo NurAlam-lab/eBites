@@ -23,17 +23,17 @@ const TopBanner = () => {
                 >
                     <div className="text-center my-5 py-5">
                         <Bounce left cascade>
-                            <h1 className="text-dark">All Your Favorite Food
-                                at your doorstep.</h1>
+                            <Typography variant='h1' className="text-dark">All Your Favorite Food
+                                at your doorstep.</Typography>
                         </Bounce>
 
                         <Bounce>
-                            <Link to="foods" style={{ textDecoration: 'none' }} variant='danger' sx={{ my: 1 }} className="btn rounded-pill bg-dark fs-5 py-2 px-4 text-white"
+                            <Link to="foods" style={{ textDecoration: 'none' }} variant='danger' sx={{ my: 1 }} className="btn rounded-pill bg-dark fs-2 py-2 px-4 text-white"
                             >Discover</Link>
                         </Bounce>
 
                         <Bounce right cascade>
-                            <Typography variant='h6' className="my-4 text-dark ">Already a member? <Link id='signin-link' to='/login' >Sign In</Link> </Typography>
+                            <Typography variant='h3' className="my-4 text-dark ">Already a member? <Link id='signin-link' to='/login' >Sign In</Link> </Typography>
                         </Bounce>
 
 

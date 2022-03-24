@@ -22,7 +22,7 @@ const WhyeBite = [
 const WhyeBites = () => {
     return (
         <Container>
-            <Typography sx={{ mt: 5 }} variant="h4" component="div">
+            <Typography sx={{ mt: 5 }} variant="h2" component="div">
                 Why Try eBites
             </Typography>
             <Box sx={{ flexGrow: 1 }}>

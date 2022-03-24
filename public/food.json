@@ -4,54 +4,64 @@
         "category": "Fast Food",
         "name": "pizza-rustic-italian",
         "seller": "Manfrotto",
+        "sellerId": 1,
         "description": "Our 5 star receiving popular item, a crunchy but soft pizza topped with shredded chicken frank, plenty of Mozzarella cheese and homemade Marinara sauce, olive, capsicum etc....",
         "stock": 50,
         "img": "https://thumbs.dreamstime.com/b/pizza-rustic-italian-mozzarella-cheese-basil-leaves-35669930.jpg",
         "price": 379,
-        "shipping": 5.99
+        "shipping": 5,
+        "quantity": 1
     },
     {
         "id": 2,
         "category": "Fast Food",
         "name": "pizza-pepperoni-cheese",
         "seller": "Manfrotto",
+        "sellerId": 2,
         "description": "Our 5 star receiving popular item, a crunchy but soft pizza topped with shredded chicken frank, plenty of Mozzarella cheese and homemade Marinara sauce, olive, capsicum etc....",
         "stock": 50,
         "img": "https://thumbs.dreamstime.com/b/pizza-pepperoni-cheese-salami-vegetables-58914487.jpg",
         "price": 300,
-        "shipping": 3.99
+        "shipping": 3,
+        "quantity": 1
     },
     {
         "id": 3,
         "category": "Fast Food",
         "name": "hot-pizza-slice",
         "seller": "Manfrotto",
+        "sellerId": 1,
         "description": "Our 5 star receiving popular item, a crunchy but soft pizza topped with shredded chicken frank, plenty of Mozzarella cheese and homemade Marinara sauce, olive, capsicum etc....",
         "stock": 50,
         "img": "https://thumbs.dreamstime.com/b/hot-pizza-slice-wooden-table-35993453.jpg",
         "price": 411,
-        "shipping": 5.99
+        "shipping": 5,
+        "quantity": 1
     },
     {
         "id": 4,
         "category": "Fast Food",
         "name": "burger-black",
         "seller": "Manfrotto",
+        "sellerId": 2,
         "description": "Perfectly seared chicken breast, sliced cheese, fresh lettuce, onion, pickled cucumber and garlic mayonnaise in a fluffy bun.",
         "stock": 50,
         "img": "https://thumbs.dreamstime.com/b/burger-black-940097.jpg",
         "price": 179,
-        "shipping": 3.99
+        "shipping": 3,
+        "quantity": 1
     },
     {
         "id": 5,
         "category": "Fast Food",
         "name": "fresh-tasty-burger",
         "seller": "Manfrotto",
+        "sellerId": 1,
         "description": "Perfectly seared chicken breast, sliced cheese, fresh lettuce, onion, pickled cucumber and garlic mayonnaise in a fluffy bun.",
         "stock": 55,
         "img": "https://thumbs.dreamstime.com/b/fresh-tasty-burger-black-background-61684737.jpg",
         "price": 169,
-        "shipping": 3.99
+        "shipping": 3,
+        "quantity": 1
     }
 ]

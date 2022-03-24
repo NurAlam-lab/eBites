@@ -4,7 +4,8 @@ import { Redirect } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 
-const PrivateRoute = ({ children, ...rest }) => {
+const PrivateRoute = (props) => {
+    const { children, ...rest } = props;
     const { allContext } = useAuth();
     const { user, isLoading } = allContext;
     if (isLoading) { return <CircularProgress /> }

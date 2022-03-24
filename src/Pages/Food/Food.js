@@ -22,10 +22,10 @@ const Food = (props) => {
                             alt="green iguana"
                         />
 
-                        <Typography variant="h5" component="div">
+                        <Typography variant="h3" component="div">
                             {name}
                         </Typography>
-                        <Typography variant="h5" component="div">
+                        <Typography variant="h3" component="div">
                             ৳{price}
                         </Typography>
                     </CardContent>

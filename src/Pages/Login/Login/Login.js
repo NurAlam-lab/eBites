@@ -10,6 +10,7 @@ import './Login.css'
 const Login = () => {
     const [logInData, setLogInData] = useState({});
     const { allContext } = useAuth();
+
     const { user, loginUser, signInWithGoogle, isLoading, authError } = allContext;
 
     const location = useLocation();
@@ -35,10 +36,11 @@ const Login = () => {
         <Container>
             <Grid container spacing={2}>
                 <Grid sx={{ mt: 15 }} item xs={12} md={6}>
-                    <Typography variant='body1' gutterBottom>Sign In</Typography>
+                    <Typography variant='h3' gutterBottom>Sign In</Typography>
                     <form onSubmit={handleLogInSubmit}>
                         <TextField
-                            sx={{ width: '75%', m: 1 }}
+
+                            sx={{ width: '75%', m: 1, fontSize: "18px" }}
                             id="standard-basic"
                             label="Your Email"
                             name="email"
@@ -55,13 +57,13 @@ const Login = () => {
                             onChange={handleOnChange}
                             variant="standard" />
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant='contained'>Sign In</Button> <br />
-                        <Link id='signUp-link' to='/register' >New User? Please Sign Up</Link>
+                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant='contained' style={{ fontSize: '17px' }}>Sign In</Button> <br />
+                        <Link id='signUp-link' to='/register' style={{ fontSize: '17px' }} >New User? Please Sign Up</Link>
                         {isLoading && <CircularProgress />}
-                        {user?.email && <Alert severity="success">Sign In successfully!</Alert>}
+                        {user?.email && <Alert severity="success" style={{ fontSize: '17px' }}>Sign In successfully!</Alert>}
                         {authError && <Alert severity="error">{authError}</Alert>}
                         <br />------------------------------- <br />
-                        <Button onClick={handleGoogleSignIn} sx={{ m: 1 }} variant='contained'>Google Sign In</Button>
+                        <Button onClick={handleGoogleSignIn} sx={{ m: 1 }} style={{ fontSize: '17px' }} variant='contained'>Google Sign In</Button>
                     </form>
                 </Grid>
                 <Grid sx={{ mt: 2 }} item xs={12} md={6}>

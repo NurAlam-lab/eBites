@@ -15,7 +15,7 @@ const Service = (props) => {
                     image={img}
                     alt="green iguana"
                 />
-                <Typography variant="h5" component="div">
+                <Typography variant="h3" component="div">
                     {name}
                 </Typography>
 

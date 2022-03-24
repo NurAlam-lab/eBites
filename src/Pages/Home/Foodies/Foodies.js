@@ -12,21 +12,21 @@ const joinUs = {
 }
 const Foodies = () => {
     return (
-        <Box sx={{ my: 3 }} item style={{ ...joinUs }}>
+        <Box sx={{ mt: 3 }} item style={{ ...joinUs }}>
             <div>
                 <Bounce left cascade>
-                    <Typography sx={{ my: 2 }} variant='h3'>
+                    <Typography sx={{ my: 2 }} variant='h1'>
                         Ready to Order?
                     </Typography>
                 </Bounce>
 
                 <Bounce right cascade>
-                    <Typography variant='h5'>
+                    <Typography variant='h3'>
                         Welcome to the Foodies Nirvana
                     </Typography> <br />
                 </Bounce>
                 <Bounce>
-                    <Link to="foods" style={{ textDecoration: 'none' }} variant='danger' sx={{ my: 1 }} className="btn rounded-pill bg-dark fs-5 py-2 px-4 text-white"
+                    <Link to="foods" style={{ textDecoration: 'none' }} variant='danger' sx={{ mt: 1 }} className="btn rounded-pill bg-dark fs-2 py-2 px-4 text-white"
                     >Discover</Link>
                 </Bounce>
             </div>
