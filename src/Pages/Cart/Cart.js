@@ -75,7 +75,7 @@ const Details = () => {
 
 
 
-                </div> : <div><h2>No Food Found</h2></div>}
+                </div > : <div style={{ marginBottom: "180px" }}><h2>No Food Found</h2></div>}
             </Container >
         </div>
     );
