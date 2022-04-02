@@ -25,9 +25,14 @@ async function run() {
         const foods_collection = database.collection("foods");
 
         app.get('/foods', async (req, res) => {
+            const size = parseInt(req.query.size);
+            const page = req.query.page;
             const cursor = foods_collection.find({});
             const count = await cursor.count();
-            const foods = await cursor.toArray();
+            const foods = await cursor
+                .skip(size * page)
+                .limit(size)
+                .toArray();
             res.json({ count, foods })
         })
 
