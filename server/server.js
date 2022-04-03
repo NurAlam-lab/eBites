@@ -29,10 +29,16 @@ async function run() {
             const page = req.query.page;
             const cursor = foods_collection.find({});
             const count = await cursor.count();
-            const foods = await cursor
-                .skip(size * page)
-                .limit(size)
-                .toArray();
+            let foods;
+            if (size && page) {
+                foods = await cursor
+                    .skip(size * page)
+                    .limit(size)
+                    .toArray();
+            } else {
+                foods = await cursor.toArray();
+            }
+
             res.json({ count, foods })
         })
 
