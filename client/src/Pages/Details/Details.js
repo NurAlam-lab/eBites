@@ -1,25 +1,43 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Button, Container, Typography } from '@mui/material';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 
 
 const Details = () => {
-    const { _id } = useParams();
-    const { foods, addToCart } = useAuth();
-    const matchingFood = foods.find((food) => food._id === (_id));
-    const { name, seller, description, img, price } = matchingFood;
+    const history = useHistory();
+    const [food, setFood] = useState({});
+    const { id } = useParams();
+    const { addToCart, allContext } = useAuth();
+    const { user } = allContext;
+    const { uid } = user;
+
+
+    const { name, seller, description, img, price } = food;
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/foods/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data._id) {
+                    setFood(data);
+                } else {
+                    alert("something went wrong")
+                }
+            })
+    }, [])
+
     return (
         <div>
             <Typography sx={{ mt: 6 }} variant='h1'>Ready to Order?</Typography>
-            {name ? (<Container sx={{ flexGrow: 1, my: 10, backgroundColor: 'rgb(240,240,240)', height: '433px' }}>
+            {food?.name ? (<Container sx={{ flexGrow: 1, my: 10, backgroundColor: 'rgb(240,240,240)', height: '433px' }}>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
-                        <img style={{ width: '580px', height: '400px', margin: 'auto' }} src={img} alt="" />
+                        <img style={{ width: '580px', height: '400px', margin: 'auto' }} src={food.img} alt="" />
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Box >
@@ -39,7 +57,14 @@ const Details = () => {
                                 {description}
                             </Typography><br />
 
-                            <Button onClick={() => addToCart(matchingFood)} variant="contained" sx={{ mt: 6 }} style={{ backgroundColor: '#FF5733', textDecoration: 'none', color: 'white' }} className=" fs-3 py-2 px-4 text-white">Add to Cart</Button><br />
+                            <Button onClick={() => {
+                                if (uid) {
+                                    addToCart(food)
+                                } else {
+                                    history.push("/login")
+                                }
+                            }}
+                                variant="contained" sx={{ mt: 6 }} style={{ backgroundColor: '#FF5733', textDecoration: 'none', color: 'white' }} className=" fs-3 py-2 px-4 text-white">Add to Cart</Button><br />
                         </Box>
                     </Grid>
                 </Grid>

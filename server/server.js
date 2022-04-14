@@ -1,5 +1,6 @@
 const express = require('express');
 const { MongoClient, ServerApiVersion } = require('mongodb');
+const ObjectId = require('mongodb').ObjectId;
 require('dotenv').config()
 const cors = require('cors');
 const app = express()
@@ -23,7 +24,8 @@ async function run() {
         await client.connect();
         const database = client.db("eBites");
         const foods_collection = database.collection("foods");
-
+        const cart_collection = database.collection("cart");
+        //load all data
         app.get('/foods', async (req, res) => {
             const size = parseInt(req.query.size);
             const page = req.query.page;
@@ -41,6 +43,22 @@ async function run() {
 
             res.json({ count, foods })
         })
+
+        // load single data
+        app.get('/foods/:id', async (req, res) => {
+            const id = req.params.id;
+            const quiry = { _id: ObjectId(id) };
+            const food = await foods_collection.findOne(quiry);
+            res.json(food);
+        })
+
+
+        //load cart data according to uid Get Api
+        app.get('/cart/:uid', async (req, res) => {
+            const uid = req.params.uid;
+            console.log(uid)
+        })
+
 
 
     } finally {
